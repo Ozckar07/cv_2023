@@ -1,56 +1,53 @@
-/* ESTILOS DE LA VISTA GENERAL
-* {
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(253, 254, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.full {
-    width: 50%;
-    max-width: 1000px;
-    min-height: 100px;
-    background-color: rgb(245, 239, 231);
-    margin: 0px;
-    display: grid;
-    grid-template-columns: 2fr 4fr;
-}
-
-.left {
-    position: initial;
-    background-color: rgb(10, 164, 7);
+header {
+    background-color: #333;
+    color: #fff;
     padding: 20px;
 }
 
-.right {
-    position: initial;
-    background-color: rgb(162, 202, 206);
+h1, h2, h3 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
     padding: 20px;
 }
 
-.image,
-.Contact,
-.Skills,
-.Language,
-.Hobbies,
-.title,
-.Summary,
-.Experience,
-.Education,
-.project {
-    margin-bottom: 30px;
+/* Estilos específicos */
+.job {
+    margin-bottom: 20px;
 }
 
-.h2 {
-    background-color: rgb(7, 55, 82);
-    color: #fff; /* Agregado 
-}*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
 
 /* ESTILOS CHECKBOX IDIOMA */
 .en {
@@ -95,3 +92,5 @@ body {
 .check:checked::before {
     background: #00a1ff;
 }
+
+
