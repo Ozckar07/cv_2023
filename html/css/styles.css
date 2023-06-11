@@ -1,57 +1,65 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 100px;
+    /* Añade un espacio para evitar que el contenido se superponga con la barra de navegación */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
-
-h1, h2, h3 {
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-}
-
-/* Estilos específicos */
-.job {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    height: 100px;
+    background-color: #000000;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /* Barra de navegación fija en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /* Asegura que la barra de navegación esté por encima del resto del contenido */
 }
 
+div {
+    display: inline-block;
+    margin: 20px;
+}
+
+/* ESTILOS DE TEXTO NAV BAR */
+.nav {
+    margin-left: 20px;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* fuente y estilo de texto de nav bar */
+.nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav li a:hover {
+    color: #ff0707;
+}
+
+/* END ESTILOS DE TEXTOS NAV BAR */
 
 
 /* ESTILOS CHECKBOX IDIOMA */
 .en {
-    color: #333;
+    color: #03bcff;
 }
 
 .es {
@@ -68,7 +76,7 @@ footer {
     position: absolute;
     width: 50px;
     height: 25px;
-    background: #333;
+    background: #ffffff;
     border-radius: 25px;
 }
 
@@ -79,18 +87,197 @@ footer {
     height: 25px;
     background: #fff;
     border-radius: 25px;
-    transition: 0.25s;
-    border: 2px solid #333;
+    border: 2px solid #00a1ff;
     box-sizing: border-box;
+    left: 0;
+    transition: left 0.25s, border-color 0.25s;
 }
 
 .check:checked::after {
     left: 25px;
-    border: 2px solid #00a1ff;
+    border-color: #00a1ff;
 }
 
 .check:checked::before {
     background: #00a1ff;
 }
 
+/* END ESTILOS CHECKBOX IDIOMA */
+/* /////////////////////////////////// */
 
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+section {
+    flex: 1;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section:nth-child(odd) {
+    background-color: transparent;
+}
+
+section:nth-child(even) {
+    background-color: #931a1a;
+}
+
+footer {
+    height: 100px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Diseño tipo infinito en los laterales */
+main::before,
+main::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    z-index: -1;
+}
+
+main::before {
+    top: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+}
+
+main::after {
+    bottom: 0;
+    background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.1));
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+.name {
+    font-family: 'Tilt Prism', cursive;
+    font-size: 2rem;
+    display: inline-block;
+    text-shadow: 20px 10px 15px #f521e4;
+    position: relative;
+    top: 0px;
+    left: 100px;
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+.slogan {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+.growing {
+    font-family: 'Kablammo', cursive;
+    font-size: 2rem;
+    color: green;
+}
+
+.learning {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2rem;
+    color: white;
+}
+
+
+.developing {
+    font-family: 'Silkscreen', cursive;
+    font-size: 2rem;
+}
+
+/* ANIMACION DE ESTILO DE .designing */
+.designing {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    display: inline;
+    background: linear-gradient(to left, #f521e4, #2d0718);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientTransition 0.4s infinite alternate;
+}
+
+@keyframes gradientTransition {
+    0% {
+        background: linear-gradient(to left, #ffffff, #ff0073);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    25% {
+        background: linear-gradient(to left, #f8e2f5, #f82a87);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    50% {
+        background: linear-gradient(to left, #f893eb, #fb4a9a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    75% {
+        background: linear-gradient(to left, #f953e3, #fda8cf);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100% {
+        background: linear-gradient(to left, #fe01e9, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+/* END ANIMACION .designing */
+
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+
+/* FUENTES */
+/* ///// TITULO SLOGAN ////// */
+/* .name
+font-family: 'Tilt Prism', cursive;
+.growing
+font-family: 'Alfa Slab One', cursive;
+.learning
+font-family: 'Kablammo', cursive;
+.designing
+font-family: 'Permanent Marker', cursive;
+.developing
+font-family: 'Silkscreen', cursive; */
