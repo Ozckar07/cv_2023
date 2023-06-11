@@ -1,4 +1,4 @@
-/* ESTILOS DE LA VISTA GENERAL */
+/* ESTILOS DE LA VISTA GENERAL
 * {
     margin: 0;
     padding: 0;
@@ -24,16 +24,14 @@ body {
 
 .left {
     position: initial;
-    background-color: rgb(126, 219, 231);
+    background-color: rgb(10, 164, 7);
     padding: 20px;
-
 }
 
 .right {
     position: initial;
     background-color: rgb(162, 202, 206);
     padding: 20px;
-
 }
 
 .image,
@@ -50,10 +48,11 @@ body {
 }
 
 .h2 {
-    background-color: rgb(4, 96, 150);
-}
+    background-color: rgb(7, 55, 82);
+    color: #fff; /* Agregado 
+}*/
 
-/* ESTILOS CHECKBOCK IDIOMA */
+/* ESTILOS CHECKBOX IDIOMA */
 .en {
     color: #333;
 }
