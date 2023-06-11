@@ -1,0 +1,92 @@
+OSCAR IVAN ROMERO GARCIA
+
+CÉDULA
+1758573768
+
+TELÉFONO
++ 593 97 894 1730
+
+CORREO
+osear. romero. 7@outlook.com
+
+DIRECCIÓN
+Av. Amazonas E35 - 135 y Av. Japón
+Edf. Amazonas Park I,  Quito, Ecuador
+
+EDUCACIÓN
+TECNÓLOGO DESARROLLO DE SOFTWARE
+Instituto  Superior  Universitario  Sucre, Quito
+
+2020 - 2023
+
+Apasionado de la tecnología con capacidad de adaptación y aprendizaje de    nuevas    tecnologías,    metodologías,    lenguajes
+y    frameworks utilizados en  el  área  de desarrollo de  software y   diseño  de  base  de dato, en  busca  de  nuevos  retos, 
+enseñanzas y aportes dentro de  una empresa  y equipo  de trabajo.
+
+
+SENESCYT \ +593995496454
+2022/11/28  - 2023/02/02      Practicante  - Soporte técnico
+O Atender y resolver incidencias técnicas  reportadas por los  usuarios.
+O Diagnosticar y solucionar  problemas relacionados con hardware, software,  redes y sistemas operativos.
+O Configurar y mantener equipos informáticos,  incluyendo  instalación  y actualización  de software.
+O Brindar  capacitación básica a  los  usuarios  sobre el uso de hardware y software.
+O Realizar  copias de seguridad y restauración  de datos.
+O Realizar  el seguimiento  y la gestión  de activos  de TI,  incluyendo inventario  de hardware y software.
+
+
+EDGAR NIETO - INFORMÁTICAS\ +593996690575
+2022/03/05  - Actualidad      Desarrollador web jr.
+
+O Uso de HTML, CSS y JavaScript  para crear  interfaces  de usuario interactivas  y atractivas.
+O Desarrollo  la  lógica  empresarial utilizando  PHP,  y utilización  del  framework Laravel  para
+construir aplicaciones  web  robustas  y seguras.
+O Uso de bases de datos  relacionales  como  MySQL y PostgreSQL  para almacenar y manipular datos  de manera  efectiva.
+O Diseño de esquemas  de bases de datos,  crear  consultas  SQL y administrar  la  persistencia  de
+datos.
+O Implementación  de Docker  para  empaquetar aplicaciones  y sus dependencias en entornos aislados y portátiles.
+O Trabajo  en un equipo  y participación en varios proyectos.
+O Documentación  de procesos  UML
+
+
+HABILIDADES
+O Desarrollo de paginas web estáticas y dinámicas
+O Conocimientos en diseño de redes Cisco
+O Diseño y análisis de base de datos SQL
+O Conocimiento en metodologias de desarrollo de software tradicionales y ágiles (Scrum, XP,  RUP)
+O Soporte y mantenimiento de equipos y sistemas
+
+
+TECNOLOGÍAS
+
+PHP   
+PowerDesig ner
+HTML                      
+StarUML
+css         
+Cisco Packet Tracer
+JavaScript                 
+MySQL WorkBench
+Laravel  9                 
+GitHub
+Bootstrap                          
+Photoshop
+NODE.js                    
+Docker
+
+
+REFERENCIAS
+
+ANDRÉ VILLAMIL CARRILLO
+Ingeníero  Electrónica  y redes de información
+
++593  99 650 6653
+
+
+ARÍA JOSÉ  NAVARRO BASANTES
+
+Analista  de Infraestructura,  Seguridad y Soporte Técnico 2 / SENESCYT
++593  99 549 6454
+
+https:/ /github.com/Ozckar07
+
+https:/ /www.linkedin.com/in/ozckar-romero-023b63106/
