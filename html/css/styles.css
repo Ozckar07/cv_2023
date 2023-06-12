@@ -6,7 +6,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* background-color: #000000; */
 }
 
 /* BODY STYLES */
@@ -14,29 +13,15 @@ body {
     /* display: flex; */
     display: flex;
     flex-direction: column;
-    color: rgb(0, 0, 0);
     overflow: hidden;
-    touch-action: manipulation;
     /* Bloquea el scroll de la página */
-    /* Añade un espacio para evitar que el contenido se superponga con la barra de navegación */
+    touch-action: manipulation;
 }
 
 /* MAIN STYLES */
 main {
     flex-grow: 2;
     flex-direction: column;
-    overflow: hidden;
-}
-
-/* Diseño tipo infinito en los laterales */
-main::before,
-main::after {
-    content: '';
-    position: relative;
-    left: 0;
-    right: 0;
-    height: 0;
-    z-index: -1;
 }
 
 main::before {
@@ -52,7 +37,7 @@ main::after {
 /* SECTION STYLES */
 section {
     flex: 1;
-    min-height: 100vh;
+    min-height: 150vh;
     display: flex;
 }
 
@@ -61,7 +46,7 @@ section:nth-child(odd) {
 }
 
 section:nth-child(even) {
-    background-color: #931a1a;
+    background-color: transparent;
 }
 
 footer {
@@ -76,7 +61,7 @@ footer {
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* Mobile Styles */
-@media (max-width: 1080px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 628px) {
     body {
         /* define el tamaño de fuente */
         font-size: 14px;
@@ -93,30 +78,24 @@ footer {
     }
 
     .container {
-        padding: auto;
+        padding: 10px;
     }
 
     .content {
-        padding: auto;
+        padding: 0px;
     }
 
     .img-dev {
-        max-width:50%;
+        max-width: 100%;
         height: auto;
     }
 }
-
 /* Tablet and Desktop Styles */
-@media (min-width: 1080px) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     body {
-        zoom: 100% !important; /* Bloquea el zoom en dispositivos de escritorio */
+        zoom: 100% !important;
+        /* Bloquea el zoom en dispositivos de escritorio */
         font-size: 16px;
-    }
-
-    .container {
-    }
-
-    .content {
     }
 
     .img-dev {
@@ -124,26 +103,29 @@ footer {
         height: auto;
     }
 }
+
 /* //////////////////////////////////////////////////////////////////// */
 /* /////////////////////////// NAV BAR ///////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 
 .side-nav {
-    position: fixed;
     /* Fija la posición del nav en la ventana del navegador */
-    left: 0;
+    position: fixed;
     /* Alinea el nav a la izquierda */
-    top: 0;
+    left: 0;
     /* Alinea el nav en la parte superior */
-    height: 100vh;
+    top: 0;
     /* Establece la altura del nav al 100% del viewport */
-    width: 200px;
+    height: 100vh;
     /* Establece el ancho del nav según tus necesidades */
-    background-color: #000000;
+    width: 150px;
     /* Establece el color de fondo del nav */
-    scroll-behavior: smooth;
+    background-color: transparent;
     /* Agrega un desplazamiento suave al navegar por los enlaces del nav */
+    scroll-behavior: smooth;
+    /* siempre arriba de todo */
+    z-index: 1000;
 }
 
 /* ESTILOS DE TEXTO NAV BAR */
@@ -158,7 +140,7 @@ nav li a {
     /* Convierte los enlaces en elementos de bloque para ocupar todo el ancho del nav */
     padding: 10px;
     /* Agrega un espacio alrededor de los enlaces para mayor legibilidad */
-    color: #ffffff;
+    color: #73099e;
     /* Establece el color de texto de los enlaces */
     text-decoration: none;
     /* Elimina el subrayado de los enlaces */
@@ -175,7 +157,18 @@ nav li a:hover {
 /* END ESTILOS DE TEXTOS NAV BAR */
 
 
-/* ESTILOS CHECKBOX IDIOMA */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////// ESTILOS CHECKBOX IDIOMA /////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+.idiomas {
+    z-index: 10;
+    display: block;
+    position: fixed;
+    top: 2%;
+    left: 85%;
+}
+
 .en {
     color: #03bcff;
 }
@@ -186,8 +179,7 @@ nav li a:hover {
 
 .check {
     position: relative;
-    width: 1em;
-    z-index: 10;
+    width: 0.1%;
 }
 
 .check::before {
@@ -220,8 +212,6 @@ nav li a:hover {
 .check:checked::before {
     background: #00a1ff;
 }
-
-/* END ESTILOS CHECKBOX IDIOMA */
 
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
