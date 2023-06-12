@@ -1,101 +1,175 @@
+/* //////////////////////////////////////////////////////////////////// */
+/* ////////////////////// GLOBAL STYLES //////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* GLOBAL STYLES */
 * {
     margin: 0;
     padding: 0;
     /* background-color: #000000; */
 }
-.hola{
-    color: #03bcff;
-}
+
+/* BODY STYLES */
 body {
+    /* display: flex; */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding-top: 100px;
-    color: white;
-    background-color: #000000;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    touch-action: manipulation;
+    /* Bloquea el scroll de la página */
     /* Añade un espacio para evitar que el contenido se superponga con la barra de navegación */
 }
 
-header {
-    height: 100px;
-    background-color: #000000;
-    opacity: 70%;
-    text-align: center;
-    display: flex;
-    padding: 0px 100px 0px 30px;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    /* Barra de navegación fija en la parte superior */
-    top: 3rem;
-    left: 0rem;
-    right: 0;
-    z-index: 10;
-
-    /* Asegura que la barra de navegación esté por encima del resto del contenido */
+/* MAIN STYLES */
+main {
+    flex-grow: 2;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-/* CSS Styles for responsiveness */
+/* Diseño tipo infinito en los laterales */
+main::before,
+main::after {
+    content: '';
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: -1;
+}
 
+main::before {
+    top: 0;
+    /* background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0%)); */
+}
+
+main::after {
+    bottom: 0;
+    /* background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0%)); */
+}
+
+/* SECTION STYLES */
+section {
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+}
+
+section:nth-child(odd) {
+    background-color: transparent;
+}
+
+section:nth-child(even) {
+    background-color: #931a1a;
+}
+
+footer {
+    height: 100px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /////////////////// STYLES RESPONSIVE MOVIL ///////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
 /* Mobile Styles */
 @media (max-width: 1080px) {
     body {
+        /* define el tamaño de fuente */
         font-size: 14px;
+        /* Bloquea el zoom en dispositivos móviles */
+        zoom: 100% !important;
+        /* Deshabilita la selección de texto en dispositivos móviles Firefox */
+        -moz-user-select: none;
+        /* Deshabilita la selección de texto en dispositivos móviles WebKit */
+        -webkit-user-select: none;
+        /* Deshabilita la selección de texto en dispositivos móviles IE/Edge */
+        -ms-user-select: none;
+        /* Deshabilita la selección de texto en dispositivos móviles */
+        user-select: none;
     }
 
     .container {
-        padding: 10px;
+        padding: auto;
     }
 
     .content {
-        padding: 20px;
+        padding: auto;
     }
 
     .img-dev {
-        max-width: 100%;
+        max-width:50%;
         height: auto;
     }
 }
 
 /* Tablet and Desktop Styles */
-@media (min-width: 50px) {
+@media (min-width: 1080px) {
     body {
+        zoom: 100% !important; /* Bloquea el zoom en dispositivos de escritorio */
         font-size: 16px;
     }
 
     .container {
-        max-width: 960px;
-        margin: 0 auto;
     }
 
     .content {
-        padding: 40px;
     }
 
     .img-dev {
-        max-width: 100%;
+        max-width: 60%;
         height: auto;
     }
+}
+/* //////////////////////////////////////////////////////////////////// */
+/* /////////////////////////// NAV BAR ///////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+
+.side-nav {
+    position: fixed;
+    /* Fija la posición del nav en la ventana del navegador */
+    left: 0;
+    /* Alinea el nav a la izquierda */
+    top: 0;
+    /* Alinea el nav en la parte superior */
+    height: 100vh;
+    /* Establece la altura del nav al 100% del viewport */
+    width: 200px;
+    /* Establece el ancho del nav según tus necesidades */
+    background-color: #000000;
+    /* Establece el color de fondo del nav */
+    scroll-behavior: smooth;
+    /* Agrega un desplazamiento suave al navegar por los enlaces del nav */
 }
 
 /* ESTILOS DE TEXTO NAV BAR */
 nav li {
     display: inline;
-    margin: 1em;
+    margin: 20%;
 }
 
 /* fuente y estilo de texto de nav bar */
 nav li a {
-    display: inline-block;
-    text-decoration: none;
+    display: block;
+    /* Convierte los enlaces en elementos de bloque para ocupar todo el ancho del nav */
+    padding: 10px;
+    /* Agrega un espacio alrededor de los enlaces para mayor legibilidad */
     color: #ffffff;
-    font-size: 1em;
+    /* Establece el color de texto de los enlaces */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
     font-weight: bold;
+    /* Establece el peso de la fuente de los enlaces */
 }
 
 /* cuando pasa el cursos ejecuta */
 nav li a:hover {
     color: #ff00dd;
+    /* Cambia el color del texto al pasar el cursor sobre los enlaces */
 }
 
 /* END ESTILOS DE TEXTOS NAV BAR */
@@ -113,6 +187,7 @@ nav li a:hover {
 .check {
     position: relative;
     width: 1em;
+    z-index: 10;
 }
 
 .check::before {
@@ -147,63 +222,11 @@ nav li a:hover {
 }
 
 /* END ESTILOS CHECKBOX IDIOMA */
-/* /////////////////////////////////// */
-
-main {
-    flex-grow: 2;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-section {
-    flex: 1;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-}
-
-section:nth-child(odd) {
-    background-color: transparent;
-}
-
-section:nth-child(even) {
-    background-color: #931a1a;
-}
-
-footer {
-    height: 100px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-/* Diseño tipo infinito en los laterales */
-main::before,
-main::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 50vh;
-    z-index: -1;
-}
-
-main::before {
-    top: 0;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
-}
-
-main::after {
-    bottom: 0;
-    background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.1));
-}
 
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
-
 .name {
     font-family: 'Tilt Prism', cursive;
     font-size: 3rem;
@@ -211,7 +234,7 @@ main::after {
     display: inline-block;
     text-shadow: 20px 10px 15px #f521e4;
     z-index: 5;
-    }
+}
 
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
@@ -284,40 +307,11 @@ main::after {
 }
 
 /* END ANIMACION .designing */
-
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 
-
-
-/* //////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////// */
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 0 20px;
-    /* Add some padding to create space between the content and the edges */
-    box-sizing: border-box;
-    /* Adjust the box-sizing property */
-}
-
-.content {
-    max-width: 1080px;
-    /* Ajusta el ancho según sea necesario */
-    padding: 0px;
-    box-sizing: content-box;
-}
-
-.img-dev{
-
-}
 
 
 
