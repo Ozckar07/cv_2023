@@ -89,6 +89,14 @@ footer {
         max-width: 100%;
         height: auto;
     }
+
+    .idiomas {
+        z-index: 10;
+        display: block;
+        position: fixed;
+        top: 2%;
+        left: 80% !important;
+    }
 }
 /* Tablet and Desktop Styles */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
@@ -227,7 +235,6 @@ nav li a:hover {
     position: absolute;
     top: 0%;
     left: 30%;
-
 }
 
 /* //////////////////////////////////////////////////////////////////// */
