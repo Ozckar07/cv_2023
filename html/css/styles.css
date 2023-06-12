@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    /* background-color: #000000; */
 }
 
 body {
@@ -8,50 +9,91 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding-top: 100px;
+    color: white;
+    background-color: #000000;
     /* Añade un espacio para evitar que el contenido se superponga con la barra de navegación */
 }
 
 header {
     height: 100px;
     background-color: #000000;
+    opacity: 70%;
     text-align: center;
     display: flex;
+    padding: 0px 100px 0px 30px;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     /* Barra de navegación fija en la parte superior */
-    top: 0;
-    left: 0;
+    top: 3rem;
+    left: 0rem;
     right: 0;
-    z-index: 999;
+    z-index: 10;
+
     /* Asegura que la barra de navegación esté por encima del resto del contenido */
 }
 
-div {
-    display: inline-block;
-    margin: 20px;
+/* CSS Styles for responsiveness */
+
+/* Mobile Styles */
+@media (max-width: 1080px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .img-dev {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 50px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 40px;
+    }
+
+    .img-dev {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 /* ESTILOS DE TEXTO NAV BAR */
-.nav {
-    margin-left: 20px;
-}
-
-.nav li {
-    display: inline-block;
-    margin: 0 10px;
+nav li {
+    display: inline;
+    margin: 1em;
 }
 
 /* fuente y estilo de texto de nav bar */
-.nav li a {
+nav li a {
+    display: inline-block;
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bold;
 }
 
-.nav li a:hover {
-    color: #ff0707;
+/* cuando pasa el cursos ejecuta */
+nav li a:hover {
+    color: #ff00dd;
 }
 
 /* END ESTILOS DE TEXTOS NAV BAR */
@@ -68,7 +110,7 @@ div {
 
 .check {
     position: relative;
-    width: 50px;
+    width: 1em;
 }
 
 .check::before {
@@ -106,7 +148,7 @@ div {
 /* /////////////////////////////////// */
 
 main {
-    flex-grow: 1;
+    flex-grow: 2;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -117,8 +159,6 @@ section {
     min-height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 section:nth-child(odd) {
@@ -161,15 +201,15 @@ main::after {
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
+
 .name {
     font-family: 'Tilt Prism', cursive;
-    font-size: 2rem;
+    font-size: 3rem;
+    color: #03bcff;
     display: inline-block;
     text-shadow: 20px 10px 15px #f521e4;
-    position: relative;
-    top: 0px;
-    left: 100px;
-}
+    z-index: 5;
+    }
 
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
@@ -177,32 +217,31 @@ main::after {
 /* //////////////////////////////////////////////////////////////////// */
 .slogan {
     position: relative;
-    top: 0%;
-    left: 0%;
+    top: 20%;
+    left: 5%;
+    font-size: 120%;
+    z-index: 5;
 }
 
 .growing {
     font-family: 'Kablammo', cursive;
-    font-size: 2rem;
     color: green;
 }
 
 .learning {
     font-family: 'Alfa Slab One', cursive;
-    font-size: 2rem;
     color: white;
 }
 
 
 .developing {
     font-family: 'Silkscreen', cursive;
-    font-size: 2rem;
+    color: #03bcff;
 }
 
 /* ANIMACION DE ESTILO DE .designing */
 .designing {
     font-family: 'Permanent Marker', cursive;
-    font-size: 2rem;
     display: inline;
     background: linear-gradient(to left, #f521e4, #2d0718);
     -webkit-background-clip: text;
@@ -256,9 +295,27 @@ main::after {
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    /* Add some padding to create space between the content and the edges */
+    box-sizing: border-box;
+    /* Adjust the box-sizing property */
+}
 
+.content {
+    max-width: 1080px;
+    /* Ajusta el ancho según sea necesario */
+    padding: 0px;
+    box-sizing: content-box;
+}
 
+.img-dev{
 
+}
 
 
 
