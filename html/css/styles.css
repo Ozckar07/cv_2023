@@ -224,6 +224,10 @@ nav li a:hover {
     display: inline-block;
     text-shadow: 20px 10px 15px #f521e4;
     z-index: 5;
+    position: absolute;
+    top: 0%;
+    left: 30%;
+
 }
 
 /* //////////////////////////////////////////////////////////////////// */
@@ -231,11 +235,11 @@ nav li a:hover {
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 .slogan {
+    font-size: 1rem;
+    z-index: 5;
     position: relative;
     top: 20%;
     left: 5%;
-    font-size: 120%;
-    z-index: 5;
 }
 
 .growing {
