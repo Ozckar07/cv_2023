@@ -3,7 +3,9 @@
     padding: 0;
     /* background-color: #000000; */
 }
-
+.hola{
+    color: #03bcff;
+}
 body {
     display: flex;
     flex-direction: column;
