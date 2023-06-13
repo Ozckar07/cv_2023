@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Styles CSS -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,133 +22,139 @@
 <body>
     <header>
         <nav class="side-nav">
-            <!-- Agrega el ícono del menú desplegable -->
             <ul>
-                <li><a href="#home"><img src="/img/HOME.png" alt="home">HOME</a></li>
-                <li><a href="#about"><img src="/img/ABOUT.png" alt="about">ABOUT ME</a>
+                <li>
+                    <img src="img/HOME.png" alt="home">
+                    <a href="#home">HOME</a></li>
+                <li>
+                    <img src="img/ABOUT.png" alt="about">
+                    <a href="#about">ABOUT ME</a>
                 </li>
-                <li><a href="#experience"><img src="/img/EXPERIENCE.png"
-                            alt="experience">EXPERIENCE</a></li>
-                <li><a href="#skills"><img src="/img/SKILLS.png" alt="skills">SKILLS</a></li>
-                <li><a href="#education"><img src="/img/EDUCATION.png"
-                            alt="education">EDUCATION</a></li>
-                <li><a href="#contact"><img src="/img/CONTACT.png" alt="contact">CONTACT</a>
+                <li>
+                    <img src="img/EXPERIENCE.png" alt="experience">
+                    <a href="#experience">EXPERIENCE</a></li>
+                <li>
+                    <img src="img/SKILLS.png" alt="skills">
+                    <a href="#skills">SKILLS</a></li>
+                <li>
+                    <img src="img/EDUCATION.png" alt="education">
+                    <a href="#education">EDUCATION</a>
+                </li>
+                <li>
+                    <img src="img/CONTACT.png" alt="contact">
+                    <a href="#contact">CONTACT</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <div class="content">
-
-            <div class="idiomas">
-                <span class="en">EN</span>
-                <input type="checkbox" class="check">
-                <span class="es">ES</span>
-            </div>
-
-            <section id="home">
-
-                <h1 class="name">Oscar Romero</h1>
-                <div class="slogan">
-                    <h1 class="growing">" GROWING,</h1>
-                    <h1 class="learning">LEARNING,</h1>
-                    <h1 class="designing">DESIGNING,</h1>
-                    <h1 class="developing">DEVELOPING..."</h1>
-                    <img class="img-dev" src="/img/desarrolladorToon.png" alt="Dev">
-                </div>
-            </section>
-
-
-            <section id="about">
-                <div>
-                    <h2>About Me</h2>
-                    <p>Passionate about technology with the ability to adapt and learn new technologies, methodologies,
-                        languages, and frameworks used in the software development and database design field, in search
-                        of new challenges, learnings, and contributions within a company and a team.</p>
-                </div>
-            </section>
-
-            <section id="experience">
-                <div>
-                    <h2>Experience</h2>
-                    <div class="job">
-                        <h3>Intern - Technical Support, SENESCYT</h3>
-                        <p>2022/11/28 - 2023/02/02</p>
-                        <ul>
-                            <li>Handle and resolve technical incidents reported by users.</li>
-                            <li>Diagnose and solve problems related to hardware, software, networks, and operating
-                                systems.</li>
-                            <li>Configure and maintain computer equipment, including software installation and updates.
-                            </li>
-                            <li>Provide basic training to users on the use of hardware and software.</li>
-                            <li>Perform data backups and restoration.</li>
-                            <li>Track and manage IT assets, including hardware and software inventory.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job">
-                        <h3>Junior Web Developer, Edgar Nieto - Informáticas</h3>
-                        <p>2022/03/05 - Present</p>
-                        <ul>
-                            <li>Use HTML, CSS, and JavaScript to create interactive and attractive user interfaces.</li>
-                            <li>Develop business logic using PHP and the Laravel framework to build robust and secure
-                                web applications.</li>
-                            <li>Use relational databases like MySQL and PostgreSQL to store and manipulate data
-                                effectively.</li>
-                            <li>Design database schemas, create SQL queries, and manage data persistence.</li>
-                            <li>Implement Docker to package applications and their dependencies in isolated and portable
-                                environments.</li>
-                            <li>Work in teams and participate in multiple projects.</li>
-                            <li>Document processes using UML.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills">
-                <div>
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Development of static and dynamic web pages</li>
-                        <li>Knowledge of Cisco network design</li>
-                        <li>Design and analysis of SQL databases</li>
-                        <li>Knowledge of traditional and agile software development methodologies (Scrum, XP, RUP)</li>
-                        <li>Support and maintenance of equipment and systems</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="education">
-                <div>
-                    <h2>Education</h2>
-                    <div class="education-item">
-                        <h3>Software Development Technologist, Instituto Superior Universitario Sucre</h3>
-                        <p>2020 - 2023</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact">
-                <div>
-                    <h2>Contact</h2>
-                    <ul>
-                        <li><strong>Phone:</strong> +593 97 894 1730</li>
-                        <li><strong>Email:</strong> osear.romero.7@outlook.com</li>
-                        <li><strong>Address:</strong> Av. Amazonas E35 - 135 and Av. Japón, Edf. Amazonas Park I, Quito,
-                            Ecuador</li>
-                    </ul>
-                </div>
-            </section>
+    <main>
+        <div class="idiomas">
+            <span class="en">EN</span>
+            <input type="checkbox" class="check">
+            <span class="es">ES</span>
         </div>
-    </div>
+
+        <section id="home">
+            <img class="img-dev" src="img/desarrolladorToon.png" alt="Dev">
+            <h1 class="name">Oscar Romero</h1>
+            <div class="slogan">
+                <h1 class="growing">" GROWING,</h1>
+                <h1 class="learning">LEARNING,</h1>
+                <h1 class="designing">DESIGNING,</h1>
+                <h1 class="developing">DEVELOPING..."</h1>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div>
+                <h2>About Me</h2>
+                <p>Passionate about technology with the ability to adapt and learn new technologies, methodologies,
+                    languages, and frameworks used in the software development and database design field, in search
+                    of new challenges, learnings, and contributions within a company and a team.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div>
+                <h2>Experience</h2>
+                <div class="job">
+                    <h3>Intern - Technical Support, SENESCYT</h3>
+                    <p>2022/11/28 - 2023/02/02</p>
+                    <ul>
+                        <li>Handle and resolve technical incidents reported by users.</li>
+                        <li>Diagnose and solve problems related to hardware, software, networks, and operating
+                            systems.</li>
+                        <li>Configure and maintain computer equipment, including software installation and updates.
+                        </li>
+                        <li>Provide basic training to users on the use of hardware and software.</li>
+                        <li>Perform data backups and restoration.</li>
+                        <li>Track and manage IT assets, including hardware and software inventory.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h3>Junior Web Developer, Edgar Nieto - Informáticas</h3>
+                    <p>2022/03/05 - Present</p>
+                    <ul>
+                        <li>Use HTML, CSS, and JavaScript to create interactive and attractive user interfaces.</li>
+                        <li>Develop business logic using PHP and the Laravel framework to build robust and secure
+                            web applications.</li>
+                        <li>Use relational databases like MySQL and PostgreSQL to store and manipulate data
+                            effectively.</li>
+                        <li>Design database schemas, create SQL queries, and manage data persistence.</li>
+                        <li>Implement Docker to package applications and their dependencies in isolated and portable
+                            environments.</li>
+                        <li>Work in teams and participate in multiple projects.</li>
+                        <li>Document processes using UML.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Development of static and dynamic web pages</li>
+                    <li>Knowledge of Cisco network design</li>
+                    <li>Design and analysis of SQL databases</li>
+                    <li>Knowledge of traditional and agile software development methodologies (Scrum, XP, RUP)</li>
+                    <li>Support and maintenance of equipment and systems</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <div>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Software Development Technologist, Instituto Superior Universitario Sucre</h3>
+                    <p>2020 - 2023</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div>
+                <h2>Contact</h2>
+                <ul>
+                    <li><strong>Phone:</strong> +593 97 894 1730</li>
+                    <li><strong>Email:</strong> osear.romero.7@outlook.com</li>
+                    <li><strong>Address:</strong> Av. Amazonas E35 - 135 and Av. Japón, Edf. Amazonas Park I, Quito,
+                        Ecuador</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>Visit my profile on <a href="https://github.com/Ozckar07">GitHub</a> and <a
                 href="https://www.linkedin.com/in/oscar-iv%C3%A1n-romero-garc%C3%ADa-023b63106">LinkedIn</a></p>
     </footer>
 
-    <script src="/js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
