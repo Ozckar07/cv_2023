@@ -118,48 +118,64 @@ footer {
 /* //////////////////////////////////////////////////////////////////// */
 
 .side-nav {
-    /* Fija la posición del nav en la ventana del navegador */
     position: fixed;
-    /* Alinea el nav a la izquierda */
-    left: 0;
-    /* Alinea el nav en la parte superior */
+    width: 60px;
     top: 0;
-    /* Establece la altura del nav al 100% del viewport */
+    left: 0;
     height: 100vh;
-    /* Establece el ancho del nav según tus necesidades */
-    width: 150px;
-    /* Establece el color de fondo del nav */
-    background-color: transparent;
-    /* Agrega un desplazamiento suave al navegar por los enlaces del nav */
-    scroll-behavior: smooth;
-    /* siempre arriba de todo */
-    z-index: 1000;
+    z-index: 100;
+    background-color: #202020;
+    overflow: hidden;
+    transition: width .3s ease;
+    cursor: pointer;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, .4);
 }
 
-/* ESTILOS DE TEXTO NAV BAR */
-nav li {
-    display: inline;
-    margin: 20%;
+.side-nav:hover {
+    width: 200px;
 }
 
-/* fuente y estilo de texto de nav bar */
-nav li a {
+@media screen and (min-width: 600px) {
+    .side-nav {
+        width: 80px;
+    }
+}
+
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav ul li {
+    padding: 1rem;
+}
+
+.side-nav ul li a {
     display: block;
-    /* Convierte los enlaces en elementos de bloque para ocupar todo el ancho del nav */
-    padding: 10px;
-    /* Agrega un espacio alrededor de los enlaces para mayor legibilidad */
-    color: #73099e;
-    /* Establece el color de texto de los enlaces */
+    color: white;
     text-decoration: none;
-    /* Elimina el subrayado de los enlaces */
-    font-weight: bold;
-    /* Establece el peso de la fuente de los enlaces */
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 1.35em;
+    transition: all .3s ease;
 }
 
-/* cuando pasa el cursos ejecuta */
-nav li a:hover {
-    color: #ff00dd;
-    /* Cambia el color del texto al pasar el cursor sobre los enlaces */
+.side-nav ul li a:hover {
+    color: #54a4ff;
+}
+
+.side-nav img {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .side-nav img {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 /* END ESTILOS DE TEXTOS NAV BAR */
