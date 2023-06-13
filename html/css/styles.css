@@ -480,6 +480,11 @@ footer {
     left: 8%;
 }
 
+.contact-content ul li img {
+    width: 100px;
+    height: auto;
+}
+
 .contact-title {
     position: relative;
     margin: 1em;
