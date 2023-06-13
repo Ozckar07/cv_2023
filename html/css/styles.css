@@ -493,13 +493,34 @@ footer {
 }
 
 #contact ul {
-    color: #ff0101;
+    padding: 3em;
 }
 
 #contact ul li {
-    color: #19be63;
+    text-decoration: none;
+    padding-right: 3em;
+    display: inline-block;
 }
 
+#contact ul li a {
+    text-decoration: none;
+}
+
+#contact ul li strong {
+    display: inline-block;
+    color: #003619;
+}
+
+#contact ul li b {
+    display: inline-block;
+    color: #c4181b;
+}
+
+.text-contact{
+    display: inline;
+    position: relative;
+    top: -5em;
+}
 
 
 /* ////////////////////////////////////////////////////////////////////////////// */
