@@ -4,106 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Styles CSS -->
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>ESPAÑOL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Comforter+Brush&family=Kablammo&family=Permanent+Marker&family=Silkscreen:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>CV OSCAR ES</title>
 </head>
 
 <body>
     <header>
-        <h1>Oscar Ivan Romero Garcia</h1>
-        <span class="en">EN</span>
-        <input type="checkbox" class="check" checked>
-        <span class="es">ES</span>
-        <h1>ESPAÑOL</h1>
-        <nav>
+        <nav class="side-nav">
             <ul>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#education">Educación</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li>
+                    <img src="../img/HOME.png" alt="home">
+                    <a href="#home">INICIO</a>
+                </li>
+                <li>
+                    <img src="../img/ABOUT.png" alt="about">
+                    <a href="#about">CONÓCEME</a>
+                </li>
+                <li>
+                    <img src="../img/EXPERIENCE.png" alt="experience">
+                    <a href="#experience">EXPERIENCIA</a>
+                </li>
+                <li>
+                    <img src="../img/SKILLS.png" alt="skills">
+                    <a href="#skill">HABILIDADES</a>
+                </li>
+                <li>
+                    <img src="../img/EDUCATION.png" alt="education">
+                    <a href="#education">EDUCACIÓN</a>
+                </li>
+                <li>
+                    <img src="../img/CONTACT.png" alt="contact">
+                    <a href="#contact">CONTACTAME</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>Sobre Mí</h2>
-        <p>Apasionado de la tecnología con capacidad de adaptación y aprendizaje de nuevas tecnologías, metodologías,
-            lenguajes y frameworks utilizados en el área de desarrollo de software y diseño de bases de datos, en busca
-            de
-            nuevos retos, enseñanzas y aportes dentro de una empresa y equipo de trabajo.</p>
-    </section>
-
-    <section id="experience">
-        <h2>Experiencia</h2>
-        <div class="job">
-            <h3>Practicante - Soporte técnico, SENESCYT</h3>
-            <p>2022/11/28 - 2023/02/02</p>
-            <ul>
-                <li>Atender y resolver incidencias técnicas reportadas por los usuarios.</li>
-                <li>Diagnosticar y solucionar problemas relacionados con hardware, software, redes y sistemas
-                    operativos.</li>
-                <li>Configurar y mantener equipos informáticos, incluyendo instalación y actualización de software.</li>
-                <li>Brindar capacitación básica a los usuarios sobre el uso de hardware y software.</li>
-                <li>Realizar copias de seguridad y restauración de datos.</li>
-                <li>Realizar el seguimiento y la gestión de activos de TI, incluyendo inventario de hardware y software.
-                </li>
-            </ul>
+    <main>
+        <div class="idiomas">
+            <span class="en">EN</span>
+            <input type="checkbox" class="check" checked>
+            <span class="es">ES</span>
         </div>
 
-        <div class="job">
-            <h3>Desarrollador web jr., Edgar Nieto - Informáticas</h3>
-            <p>2022/03/05 - Actualidad</p>
-            <ul>
-                <li>Uso de HTML, CSS y JavaScript para crear interfaces de usuario interactivas y atractivas.</li>
-                <li>Desarrollo de la lógica empresarial utilizando PHP y el framework Laravel para construir
-                    aplicaciones
-                    web robustas y seguras.</li>
-                <li>Uso de bases de datos relacionales como MySQL y PostgreSQL para almacenar y manipular datos de
-                    manera
-                    efectiva.</li>
-                <li>Diseño de esquemas de bases de datos, crear consultas SQL y administrar la persistencia de datos.
-                </li>
-                <li>Implementación de Docker para empaquetar aplicaciones y sus dependencias en entornos aislados y
-                    portátiles.</li>
-                <li>Trabajo en equipo y participación en varios proyectos.</li>
-                <li>Documentación de procesos UML.</li>
-            </ul>
-        </div>
-    </section>
+        <section id="home">
+            <img class="img-dev" src="../img/desarrolladorToon.png" alt="Dev">
+            <h1 class="name">By. Oscar Romero</h1>
+            <div class="slogan">
+                <h1 class="growing">" CRECIENDO,</h1>
+                <h1 class="learning">APRENDIENDO,</h1>
+                <h1 class="designing">DISEÑANDO,</h1>
+                <h1 class="developing">CODIFICANDO..."</h1>
+            </div>
+        </section>
 
-    <section id="skills">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>Desarrollo de páginas web estáticas y dinámicas</li>
-            <li>Conocimientos en diseño de redes Cisco</li>
-            <li>Diseño y análisis de bases de datos SQL</li>
-            <li>Conocimiento en metodologías de desarrollo de software tradicionales y ágiles (Scrum, XP, RUP)</li>
-            <li>Soporte y mantenimiento de equipos y sistemas</li>
-        </ul>
-    </section>
 
-    <section id="education">
-        <h2>Educación</h2>
-        <div class="education-item">
-            <h3>Tecnólogo Desarrollo de Software, Instituto Superior Universitario Sucre</h3>
-            <p>2020 - 2023</p>
-        </div>
-    </section>
+        <section id="about">
+            <div class="about-content">
+                <h2 class="about-title">CONÓCEME</h2>
+                <p>Apasionado de la tecnología con capacidad de adaptación y aprendizaje de nuevas tecnologías,
+                    metodologías, lenguajes
+                    y frameworks utilizados en el área de desarrollo de software y diseño de base de dato, en busca de
+                    nuevos retos,
+                    enseñanzas y aportes dentro de una empresa y equipo de trabajo.</p>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contacto</h2>
-        <ul>
-            <li><strong>Teléfono:</strong> +593 97 894 1730</li>
-            <li><strong>Correo:</strong> osear.romero.7@outlook.com</li>
-            <li><strong>Dirección:</strong> Av. Amazonas E35 - 135 y Av. Japón, Edf. Amazonas Park I, Quito, Ecuador
-            </li>
-        </ul>
-    </section>
+        <section id="experience">
+            <div class="experience-content">
+                <h2 class="experience-title">EXPERIENCIA</h2>
+                <div class="job">
+                    <h3>Practicante - Soporte técnico, SENESCYT</h3>
+                    <p>2022/11/28 - 2023/02/02</p>
+                    <ul>
+                        <li>Atender y resolver incidencias técnicas reportadas por los usuarios.</li>
+                        <li>Diagnosticar y solucionar problemas relacionados con hardware, software, redes y sistemas
+                            operativos.</li>
+                        <li>Configurar y mantener equipos informáticos, incluyendo instalación y actualización de
+                            software.
+                        </li>
+                        <li>Brindar capacitación básica a los usuarios sobre el uso de hardware y software.</li>
+                        <li>Realizar copias de seguridad y restauración de datos.</li>
+                        <li>Realizar el seguimiento y la gestión de activos de TI, incluyendo inventario de hardware y
+                            software.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h3>Desarrollador web, Edgar Nieto - Informáticas</h3>
+                    <p>2022/03/05 - Actualidad</p>
+                    <ul>
+                        <li>Uso de HTML, CSS y JavaScript para crear interfaces de usuario interactivas y atractivas.
+                        </li>
+                        <li>Desarrollo la lógica empresarial utilizando PHP, y utilización del framework Laravel para
+                            construir aplicaciones web robustas y seguras.</li>
+                        <li>Uso de bases de datos relacionales como MySQL y PostgreSQL para almacenar y manipular datos
+                            de manera efectiva.</li>
+                        <li>Diseño de esquemas de bases de datos, crear consultas SQL y administrar la persistencia de
+                            datos.</li>
+                        <li>Implementación de Docker para empaquetar aplicaciones y sus dependencias en entornos
+                            aislados y portátiles.</li>
+                        <li>Trabajo en un equipo y participación en varios proyectos.</li>
+                        <li>Documentación de procesos UML</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill">
+            <div class="skill-content">
+                <h2 class="skill-title">HABILIDADES</h2>
+                <ul>
+                    <li>Desarrollo de paginas web estáticas y dinámicas</li>
+                    <li>Conocimientos en diseño de redes Cisco</li>
+                    <li>Diseño y análisis de base de datos SQL</li>
+                    <li>Conocimiento en metodologias de desarrollo de software tradicionales y ágiles (Scrum, XP, RUP)
+                    </li>
+                    <li>Soporte y mantenimiento de equipos y sistemas</li>
+                </ul>
+            </div>
+            <div class="tools-content">
+                <h1 class="tools-title">TEGNOLOGIAS</h1>
+                <ul>
+                    <h1>PHP</h1>
+                    <h1>PowerDesigner</h1>
+                    <h1>HTML</h1>
+                    <h1>StarUML</h1>
+                    <h1>css</h1>
+                    <h1>Cisco Packet Tracer</h1>
+                    <h1>JavaScript</h1>
+                    <h1>MySQL WorkBench</h1>
+                    <h1>Laravel 9</h1>
+                    <h1>GitHub</h1>
+                    <h1>Bootstrap</h1>
+                    <h1>Photoshop</h1>
+                    <h1>NODE.js</h1>
+                    <h1>Docker</h1>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="education-content">
+                <h2 class="education-title">EDUCACIÓN</h2>
+                <div class="education-item">
+                    <h3>Tecnologo Superior en Desarrollo de Software <br> Instituto Superior Universitario Sucre</h3>
+                    <p>2020 - 2023</p>
+                </div>
+                <div class="education-item">
+                    <h3>Administración de Bares y restaurantes <br> Profesión de vida </h3>
+                    <p>2016 - 2023</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-content">
+                <h2 class="contact-title">CONTACTAME</h2>
+                <ul>
+                    <li><strong>CELULAR:</strong> +593 97 894 1730</li>
+                    <li><strong>CORREO:</strong> osear.romero.7@outlook.com</li>
+                    <li><strong>UBICACIÓN:</strong> Av. Amazonas E35 - 135 and Av. Japón, Edf. Amazonas Park I, Quito,
+                        Ecuador</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>Visita mi perfil en <a href="https://github.com/Ozckar07">GitHub</a> y <a
+        <p>Visit my profile on <a href="https://github.com/Ozckar07">GitHub</a> and <a
                 href="https://www.linkedin.com/in/oscar-iv%C3%A1n-romero-garc%C3%ADa-023b63106">LinkedIn</a></p>
     </footer>
 
