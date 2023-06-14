@@ -13,9 +13,9 @@ body {
     /* display: flex; */
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* Bloquea el scroll de la página */
-    touch-action: manipulation;
+    /* touch-action: manipulation; */
 }
 
 /* MAIN STYLES */
@@ -49,7 +49,7 @@ section:nth-child(odd) {
 }
 
 section:nth-child(even) {
-    background-color: black;
+    background-color: transparent;
 }
 
 footer {
@@ -82,20 +82,20 @@ footer {
         /* Deshabilita la selección de texto en dispositivos móviles */
         user-select: none;
     }
-    
+
     .container {
         padding: 10px;
     }
-    
+
     .content {
         padding: 0px;
     }
-    
+
     .img-dev {
         max-width: 100%;
         height: auto;
     }
-    
+
     .idiomas {
         z-index: 10;
         display: block;
@@ -123,54 +123,72 @@ footer {
     align-items: center;
     position: fixed;
     height: 100vh;
+    width: 90px;
     z-index: 100;
-    background-color: #1d065d;
+    background-color: #55535580;
     overflow: hidden;
-    transition: width 0.8s ease;
+    transition: width 2s ease;
     cursor: pointer;
-    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 7px 10px #ffffff66;
+
 }
 
 .side-nav:hover {
     width: 600px;
-    font-size: 4em;
-    background-color: rgba(81, 2, 117, 0.5);
+    height: 100vh;
+    font-size: 2em;
     /* Cambia el valor de opacidad según tus necesidades */
+    background-color: #55535580;
+    border-radius: 0 370px 370px 0;
 }
 
 
 .side-nav ul {
     list-style-type: none;
-    
+
 }
 
 .side-nav ul li {
-    padding: 1rem;
+    margin: 1em;
 }
 
 .side-nav ul li a {
     display: inline-block;
-    opacity: 0;
+    align-content: center;
+    justify-content: center;
     text-decoration: none;
-    /* justify-content: center; */
+    justify-content: center;
     font-family: 'Roboto';
-    font-size: 0.5em;
-    transition: all 1s ease;
-    
+    opacity: 0;
+    transition: all 2s ease;
+    position: relative;
+    bottom: 0.8em;
+
 }
 
 /* style .side-nav:hover contet */
 .side-nav:hover ul li a {
     opacity: 100%;
-    color: #ffffff;empty-cells: show;
+    color: #ffffff;
+    empty-cells: show;
+    align-content: center;
+    justify-content: center;
 }
 
 
 /* /////////////////////////////////////////////////////////////////////////////// */
+
 .side-nav img {
-    width: 50px;
+    width: 70px;
     height: auto;
-    
+    position: relative;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.side-nav img a {
+    position: relative;
 }
 
 /* @media screen and (min-width: 600px) {
@@ -284,19 +302,19 @@ footer {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     25% {
         background: linear-gradient(to left, #f8e2f5, #f82a87);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     50% {
         background: linear-gradient(to left, #f893eb, #fb4a9a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     75% {
         background: linear-gradient(to left, #f953e3, #fda8cf);
         -webkit-background-clip: text;
@@ -309,6 +327,7 @@ footer {
         -webkit-text-fill-color: transparent;
     }
 }
+
 /* END ANIMACION .designing */
 
 /* //////////////////////////////////////////////////////////////////// */
@@ -332,11 +351,9 @@ footer {
 /* PRINCIPAL */
 .img-dev {
     display: inline-block;
-    max-width: 50%;
-    height: auto;
-    position: absolute;
-    left: 53%;
-    top: 10%;
+    width: 20px 20px;
+    position: relative;
+ 
 }
 
 
@@ -434,10 +451,7 @@ footer {
 /* ///////////////////////////   SKILL SECTION  ////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
-#skill {
-    padding-left: 8%;
-}
-
+/* 
 .skill-content {
     position: relative;
     left: 8%;
@@ -452,23 +466,32 @@ footer {
 
 .skill-content ul {
     color: #15a023;
-}
+} */
 
 .tools-title {
-    position: relative;
+    position: absolute;
     margin: 1em;
     font-size: 3em;
     color: #cdba0d;
 }
 
 .tools-content ul {
-    color: #00a1ff;
+    position: relative;
+    text-align: center;
+    top: 10%;
+    left: 50%;
+}
+
+.tools-content ul li {
+    display: inline-block;
+    margin: 2em;
 }
 
 .tools-content ul li img {
     width: 50px;
     height: auto;
 }
+
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////// CONTACT SECTION //////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
@@ -515,7 +538,7 @@ footer {
     color: #c4181b;
 }
 
-.text-contact{
+.text-contact {
     display: inline;
     position: relative;
     top: -5em;
