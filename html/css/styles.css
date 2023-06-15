@@ -13,9 +13,9 @@ body {
     /* display: flex; */
     display: flex;
     flex-direction: column;
-    /* overflow: hidden; */
+    overflow: hidden;
     /* Bloquea el scroll de la página */
-    /* touch-action: manipulation; */
+    touch-action: manipulation;
 }
 
 /* MAIN STYLES */
@@ -28,6 +28,7 @@ main::before {
     top: 0;
     /* background: linear-gradient(to bottom, transparent,
     rgba(0, 0, 0, 0%)); */
+    transition: all 1s;
 }
 
 main::after {
@@ -57,61 +58,6 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-}
-
-/* //////////////////////////////////////////////////////////////////// */
-/* /////////////////// STYLES RESPONSIVE MOVIL ///////////////////////// */
-/* //////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////// */
-/* Mobile Styles */
-@media only screen and (min-device-width : 320px) and (max-device-width : 628px) {
-    body {
-        /* define el tamaño de fuente */
-        font-size: 14px;
-        /* Bloquea el zoom en dispositivos móviles */
-        zoom: 100% !important;
-        /* Deshabilita la selección de texto en dispositivos móviles
-        Firefox */
-        -moz-user-select: none;
-        /* Deshabilita la selección de texto en dispositivos móviles 
-        WebKit */
-        -webkit-user-select: none;
-        /* Deshabilita la selección de texto en dispositivos móviles 
-        IE/Edge */
-        -ms-user-select: none;
-        /* Deshabilita la selección de texto en dispositivos móviles */
-        user-select: none;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .content {
-        padding: 0px;
-    }
-
-    .img-dev {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .idiomas {
-        z-index: 10;
-        display: block;
-        position: fixed;
-        top: 2%;
-        left: 80% !important;
-    }
-}
-
-/* Tablet and Desktop Styles */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    body {
-        zoom: 100% !important;
-        /* Bloquea el zoom en dispositivos de escritorio */
-        font-size: 16px;
-    }
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// */
@@ -349,12 +295,7 @@ footer {
 /* /////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////// */
 /* PRINCIPAL */
-.img-dev {
-    display: inline-block;
-    width: 20px 20px;
-    position: relative;
- 
-}
+
 
 
 /* ////////////////////////////////////////////////////////////////////////////// */
@@ -469,28 +410,121 @@ footer {
 } */
 
 .tools-title {
-    position: absolute;
-    margin: 1em;
     font-size: 3em;
     color: #cdba0d;
+    /* background-color: ; */
+    position: absolute;
 }
 
 .tools-content ul {
-    position: relative;
     text-align: center;
+    position: relative;
+    width: 78%;
     top: 10%;
-    left: 50%;
+    left: 6%;
+}
+
+.tools-content ul div {
+    display: flex;
+    /* align-content: center; */
+    /* background-color: #15a023; */
+    margin: 5px auto;
+}
+
+.tools-content ul div h2 {
+    /* align-content: center; */
+    display: inline-block;
+    /* background-color: #8e1a1a; */
+    font-size: 3em;
+    padding-top: 0.6em;
 }
 
 .tools-content ul li {
     display: inline-block;
-    margin: 2em;
+    margin: 0.3em;
+    position: relative;
+    padding-top: 10px;
+    width: 150px;
+    height: 80px;
+    overflow: hidden;
+    /* background-color: rgb(156, 108, 108); */
+    transition: all 2s;
+}
+
+.tools-content ul li:hover {
+    display: inline-block;
+    /* position: relative; */
+    /* background-color: rgb(207, 0, 0); */
+    width: 500px;
+    height: 400px;
+}
+
+.tools-content ul li div {
+    /* background-color: #003619; */
+    overflow: hidden;
+    margin: 5px;
+    display: block;
+}
+
+.tools-content ul li div p {
+    padding-top: 10px;
+    margin: 1em;
 }
 
 .tools-content ul li img {
     width: 50px;
     height: auto;
+    transition: all 1s;
 }
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+.tools-content ul li img:hover {
+    width: 80px;
+}
+
+.frontend-tools {
+    display: inline-block;
+    position: relative;
+    transition: all 1s;
+}
+
+.backend-tools {
+    transition: all 1s;
+}
+
+.documentation-tools {
+    transition: all 1s;
+}
+
+.infra-tools {
+    transition: all 1s;
+}
+
+/* .frontend-tools:hover {
+    background-color: #00a1ff;
+
+}
+
+.backend-tools:hover {
+    padding-bottom: 150px;
+    background-color: #00a1ff;
+
+}
+
+.documentation-tools:hover {
+    padding-bottom: 150px;
+    background-color: #00a1ff;
+
+}
+
+.infra-tools:hover {
+    padding-top: 150px;
+    background-color: #00a1ff;
+} */
+
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////// CONTACT SECTION //////////////////////////////////// */
@@ -543,6 +577,46 @@ footer {
     position: relative;
     top: -5em;
 }
+
+
+/* //////////////////////////////////////////////////////////////////// */
+/* /////////////////// STYLES RESPONSIVE MOVIL ///////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////// */
+/* Mobile Styles */
+/* @media only screen and (min-device-width : 320px) and (max-device-width : 628px) { */
+/* body { */
+/* define el tamaño de fuente */
+/* font-size: 14px; */
+/* Bloquea el zoom en dispositivos móviles */
+/* zoom: 100% !important; */
+/* Deshabilita la selección de texto en dispositivos móviles
+        Firefox */
+/* -moz-user-select: none; */
+/* Deshabilita la selección de texto en dispositivos móviles 
+        WebKit */
+/* -webkit-user-select: none; */
+/* Deshabilita la selección de texto en dispositivos móviles 
+        IE/Edge */
+/* -ms-user-select: none; */
+/* Deshabilita la selección de texto en dispositivos móviles */
+/* user-select: none; */
+/* } */
+/* 
+    .img-dev {
+        max-width: 100%;
+        height: auto;
+    } */
+
+/* .idiomas {
+        z-index: 10;
+        display: block;
+        position: fixed;
+        top: 2%;
+        left: 80% !important;
+    }
+} */
+
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* //////////////////// BORRADOR DOCUMENTACION ////////////////////////////////// */
