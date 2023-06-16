@@ -20,7 +20,7 @@ body {
 
 /* MAIN STYLES */
 main {
-    flex-grow: 2;
+    flex-grow: 1;
     flex-direction: column;
 }
 
@@ -66,9 +66,9 @@ footer {
 .side-nav {
     display: flex;
     position: fixed;
-    align-items: center; 
+    align-items: center;
     background-color: #256D85;
-    height: 100vh;
+    height: 100%;
     width: 90px;
     z-index: 100;
     overflow: hidden;
@@ -146,18 +146,19 @@ footer {
 /* //////////////////////////////////////////////////////////////////// */
 .idiomas {
     z-index: 10;
-    display: block;
+    display: inline-block;
     position: fixed;
-    top: 2%;
+    top: 1.5em;
     left: 85%;
 }
 
 .en {
-    color: #03bcff;
+    color: #ffffff;
 }
 
 .es {
-    color: #00a1ff;
+    color: #ffffff;
+
 }
 
 .check {
@@ -185,6 +186,7 @@ footer {
     box-sizing: border-box;
     left: 0;
     transition: left 0.25s, border-color 0.25s;
+    background-color: #47B5FF;
 }
 
 .check:checked::after {
@@ -193,7 +195,7 @@ footer {
 }
 
 .check:checked::before {
-    background: #00a1ff;
+    background: #DFF6FF;
 }
 
 /* //////////////////////////////////////////////////////////////////// */
@@ -211,6 +213,39 @@ footer {
 .growing {
     font-family: 'Kablammo', cursive;
     color: green;
+    animation: greenTransition 0.5s infinite alternate;
+}
+
+@keyframes greenTransition {
+    0% {
+        background: linear-gradient(to left, #ffffff, #005f19);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    25% {
+        background: linear-gradient(to left, #c8e3cf, #12732c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    50% {
+        background: linear-gradient(to left, #8cc29a, #25823e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    75% {
+        background: linear-gradient(to left, #348249, #76b687);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100% {
+        background: linear-gradient(to left, #348249, #d7e4db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .learning {
@@ -228,10 +263,7 @@ footer {
 .designing {
     font-family: 'Permanent Marker', cursive;
     display: inline;
-    background: linear-gradient(to left, #f521e4, #2d0718);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientTransition 0.4s infinite alternate;
+    animation: gradientTransition 3s infinite alternate;
 }
 
 @keyframes gradientTransition {
@@ -268,7 +300,7 @@ footer {
 
 /* END ANIMACION .designing */
 
-/* //////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////// PRINCIPAL NAME ////////////////////////////////////// */
 .name {
     font-family: 'Comforter Brush', cursive;
     font-size: 2rem;
@@ -282,12 +314,24 @@ footer {
     z-index: 1000;
 }
 
-/* //////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////// IMAGEN //////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////// */
-/* PRINCIPAL */
+/* ////////////////////////////// PRINCIPAL IMAGEN ///////////////////////////////////////// */
+#home img {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 40%;
+    height: auto;
+    background-color: #256D85;
+    opacity: 0.2;
+    border-radius: 20%;
+    box-shadow: 10px 10px 11px #DFF6FF;
+    /* transform: scale(1) skew(-3deg, 10deg); */
+}
 
+#home img:hover {
+    background: transparent;
+    opacity: 10;
+}
 
 
 /* ////////////////////////////////////////////////////////////////////////////// */
@@ -305,7 +349,7 @@ footer {
     position: relative;
     margin: 1em;
     font-size: 3em;
-    color: #f521e4;
+    color: #DFF6FF;
 }
 
 .education-item h3 {
@@ -332,7 +376,7 @@ footer {
     position: relative;
     margin: 1em;
     font-size: 3em;
-    color: #f521e4;
+    color: #DFF6FF;
 }
 
 .job {
@@ -373,7 +417,7 @@ footer {
     position: relative;
     margin: 1em;
     font-size: 3em;
-    color: #f521e4;
+    color: #DFF6FF;
 }
 
 #about p {
@@ -384,65 +428,59 @@ footer {
 /* ///////////////////////////   SKILL SECTION  ////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
-/* 
-.skills-content {
-    position: relative;
-    left: 8%;
-}
-
 .skills-title {
-    position: relative;
-    margin: 1em;
-    font-size: 3em;
-    color: #f521e4;
+    display: flex;
+    font-size: 4em;
+    color: #DFF6FF;
+    padding: 0 0 0 8%;
+    text-shadow: 5px 5px 8px #4acbef;
 }
 
-.skills-content ul {
-    color: #15a023;
-} */
-
-.skills-title {
-    display: inline;
-    position: relative;
-    left: 50%;
-    font-size: 3em;
-    color: #f50000;
-    text-shadow: 5px 5px 8px #060007;
+#skills {
+    display: flex;
+    flex-direction: column;
 }
 
+/*/////////////////// SECTION SKILLS LOGOS ////////////////*/
 .skills-content ul {
-    text-align: center;
-    position: relative;
-    width: 78% auto;
-    top: 5%;
-    left: 10%;
+    margin-top: 6%;
 }
 
 .skills-content ul div {
     display: flex;
-
 }
 
+/* /////////////////// section SKILLS //////////////////*/
 .skills-content ul div h2 {
-    font-size: 2em;
-    padding-top: 0.5em;
+    color: hsla(204, 86%, 11%, 0.918);
+    font-size: 5em;
+    text-shadow: 1px 1px 1px rgb(106, 176, 255);
 }
 
+/* cada uno de los logos */
 .skills-content ul li {
-    display: inline;
+    text-align: center;
+    display: inline-block;
     margin: 0.2em;
     position: relative;
-    padding-top: 10px;
     width: 150px;
-    height: 80px;
+    height: 85px;
     overflow: hidden;
     transition: all 1.5s;
 }
 
 .skills-content ul li:hover {
-    display: inline-block;
-    width: 400px;
-    height: 300px;
+    display: flex;
+    box-shadow: 0 0 10px 5px rgb(0, 162, 255);
+    width: 850px;
+    height: 250px;
+    font-size: 0px;
+    background-color: rgba(0, 162, 255, 0.5);
+}
+
+.skills-content ul li:hover img {
+    width: auto;
+    height: auto;
 }
 
 .skills-content ul li div {
@@ -454,40 +492,72 @@ footer {
 }
 
 .skills-content ul li div p {
-    padding-top: 0.5rem;
-    margin: 1em;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #ccf0ff;
 }
 
+/* ///////////////////// LOGO SKILL ////////////////////////// */
 .skills-content ul li img {
     width: 50px;
     height: auto;
-    transition: all 1s;
+    transition: all 1.5s;
 }
 
+/* ///////////////////// TITLE SKILL /////////////////////////*/
 p {
-    color: rgb(0, 0, 0);
+    color: #ccf0ff;
+    font-size: 1.5em;
+    text-shadow: 1px 5px 8px #03bcff;
 }
 
-.skills-content ul li img:hover {
-    width: 80px;
-}
-
+/* //////////////// FRONTEND STYLES ///////////////*/
 .frontend-skills {
-    display: inline-block;
+    justify-content: center;
     position: relative;
     transition: all 1s;
+    /* background-color: #dadada; */
 }
 
+.frontend-skills h2 {
+    display: block;
+    position: absolute;
+}
+
+/* //////////////// BACKEND STYLES ///////////////*/
 .backend-skills {
+    justify-content: center;
     transition: all 1s;
+    /* background-color: #dadadac5; */
 }
 
+.backend-skills h2 {
+    display: block;
+    position: absolute;
+}
+
+/* //////////////// DOCUMENTATION STYLES ///////////////*/
 .documentation-skills {
+    justify-content: center;
     transition: all 1s;
+    /* background-color: #dadada7c; */
 }
 
+.documentation-skills h2 {
+    display: block;
+    position: absolute;
+}
+
+/* //////////////// INFRA STYLES ///////////////*/
 .infra-skills {
+    justify-content: center;
     transition: all 1s;
+    /* background-color: #dadada40; */
+}
+
+.infra-skills h2 {
+    display: block;
+    position: absolute;
 }
 
 /* .frontend-skills:hover {
@@ -532,7 +602,7 @@ p {
     position: relative;
     margin: 1em;
     font-size: 3em;
-    color: #f521e4;
+    color: #DFF6FF;
 }
 
 #contact ul {
@@ -590,10 +660,7 @@ p {
 /* user-select: none; */
 /* } */
 /* 
-    .img-dev {
-        max-width: 100%;
-        height: auto;
-    } */
+    
 
 /* .idiomas {
         z-index: 10;
@@ -603,5 +670,3 @@ p {
         left: 80% !important;
     }
 } */
-
-
