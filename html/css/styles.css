@@ -10,11 +10,11 @@
 
 /* BODY STYLES */
 body {
-    /* display: flex; */
+    background-color: #06283D;
+    color: #47B5FF;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    /* Bloquea el scroll de la página */
     touch-action: manipulation;
 }
 
@@ -28,7 +28,6 @@ main::before {
     top: 0;
     /* background: linear-gradient(to bottom, transparent,
     rgba(0, 0, 0, 0%)); */
-    transition: all 1s;
 }
 
 main::after {
@@ -39,6 +38,7 @@ main::after {
 
 /* SECTION STYLES */
 section {
+    background-color: #03bcff;
     font-family: 'Chakra Petch', sans-serif;
     flex: 1;
     min-height: 150vh;
@@ -65,13 +65,12 @@ footer {
 /* /////////////////////////////////////////////////////////////////////////////// */
 .side-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
+    align-items: center; 
+    background-color: #256D85;
     height: 100vh;
     width: 90px;
     z-index: 100;
-    background-color: #55535580;
     overflow: hidden;
     transition: width 2s ease;
     cursor: pointer;
@@ -84,14 +83,13 @@ footer {
     height: 100vh;
     font-size: 2em;
     /* Cambia el valor de opacidad según tus necesidades */
-    background-color: #55535580;
+    background-color: #256D85;
     border-radius: 0 370px 370px 0;
 }
 
 
 .side-nav ul {
     list-style-type: none;
-
 }
 
 .side-nav ul li {
@@ -100,10 +98,7 @@ footer {
 
 .side-nav ul li a {
     display: inline-block;
-    align-content: center;
-    justify-content: center;
     text-decoration: none;
-    justify-content: center;
     font-family: 'Roboto';
     opacity: 0;
     transition: all 2s ease;
@@ -125,12 +120,9 @@ footer {
 /* /////////////////////////////////////////////////////////////////////////////// */
 
 .side-nav img {
-    width: 70px;
+    width: 50px;
     height: auto;
     position: relative;
-    align-content: center;
-    justify-content: center;
-
 }
 
 .side-nav img a {
@@ -393,85 +385,80 @@ footer {
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* 
-.skill-content {
+.skills-content {
     position: relative;
     left: 8%;
 }
 
-.skill-title {
+.skills-title {
     position: relative;
     margin: 1em;
     font-size: 3em;
     color: #f521e4;
 }
 
-.skill-content ul {
+.skills-content ul {
     color: #15a023;
 } */
 
-.tools-title {
+.skills-title {
+    display: inline;
+    position: relative;
+    left: 50%;
     font-size: 3em;
-    color: #cdba0d;
-    /* background-color: ; */
-    position: absolute;
+    color: #f50000;
+    text-shadow: 5px 5px 8px #060007;
 }
 
-.tools-content ul {
+.skills-content ul {
     text-align: center;
     position: relative;
-    width: 78%;
-    top: 10%;
-    left: 6%;
+    width: 78% auto;
+    top: 5%;
+    left: 10%;
 }
 
-.tools-content ul div {
+.skills-content ul div {
     display: flex;
-    /* align-content: center; */
-    /* background-color: #15a023; */
-    margin: 5px auto;
+
 }
 
-.tools-content ul div h2 {
-    /* align-content: center; */
-    display: inline-block;
-    /* background-color: #8e1a1a; */
-    font-size: 3em;
-    padding-top: 0.6em;
+.skills-content ul div h2 {
+    font-size: 2em;
+    padding-top: 0.5em;
 }
 
-.tools-content ul li {
-    display: inline-block;
-    margin: 0.3em;
+.skills-content ul li {
+    display: inline;
+    margin: 0.2em;
     position: relative;
     padding-top: 10px;
     width: 150px;
     height: 80px;
     overflow: hidden;
-    /* background-color: rgb(156, 108, 108); */
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
-.tools-content ul li:hover {
+.skills-content ul li:hover {
     display: inline-block;
-    /* position: relative; */
-    /* background-color: rgb(207, 0, 0); */
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
 }
 
-.tools-content ul li div {
+.skills-content ul li div {
     /* background-color: #003619; */
     overflow: hidden;
     margin: 5px;
     display: block;
+    text-align: justify;
 }
 
-.tools-content ul li div p {
-    padding-top: 10px;
+.skills-content ul li div p {
+    padding-top: 0.5rem;
     margin: 1em;
 }
 
-.tools-content ul li img {
+.skills-content ul li img {
     width: 50px;
     height: auto;
     transition: all 1s;
@@ -481,46 +468,46 @@ p {
     color: rgb(0, 0, 0);
 }
 
-.tools-content ul li img:hover {
+.skills-content ul li img:hover {
     width: 80px;
 }
 
-.frontend-tools {
+.frontend-skills {
     display: inline-block;
     position: relative;
     transition: all 1s;
 }
 
-.backend-tools {
+.backend-skills {
     transition: all 1s;
 }
 
-.documentation-tools {
+.documentation-skills {
     transition: all 1s;
 }
 
-.infra-tools {
+.infra-skills {
     transition: all 1s;
 }
 
-/* .frontend-tools:hover {
+/* .frontend-skills:hover {
     background-color: #00a1ff;
 
 }
 
-.backend-tools:hover {
+.backend-skills:hover {
     padding-bottom: 150px;
     background-color: #00a1ff;
 
 }
 
-.documentation-tools:hover {
+.documentation-skills:hover {
     padding-bottom: 150px;
     background-color: #00a1ff;
 
 }
 
-.infra-tools:hover {
+.infra-skills:hover {
     padding-top: 150px;
     background-color: #00a1ff;
 } */
@@ -618,30 +605,3 @@ p {
 } */
 
 
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////// BORRADOR DOCUMENTACION ////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-
-
-/* FUENTES */
-
-/* TEXTO GENERAL CONTENIDO */
-/*
- font-family: 'Chakra Petch', sans-serif; 
- */
-
-
-/* ///// TITULO SLOGAN ////// */
-/* 
-.name
-font-family: 'Comforter Brush', cursive;
-.growing
-font-family: 'Alfa Slab One', cursive;
-.learning
-font-family: 'Kablammo', cursive;
-.designing
-font-family: 'Permanent Marker', cursive;
-.developing
-font-family: 'Silkscreen', cursive;
-*/
