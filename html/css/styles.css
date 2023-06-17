@@ -640,7 +640,7 @@ p {
 .contact-content ul {
     display: grid;
     grid-template-columns: repeat(3, 200px);
-    grid-gap: 20px;    
+    grid-gap: 20px;
     background-color: white;
 }
 
@@ -648,42 +648,31 @@ p {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     margin: 10px;
     background-color: #005f19;
 }
+
 #contact ul li a {
     text-decoration: none;
+    color: #DFF6FF;
+    background-color: #15a023;
 }
 
 /* QR IMG contact */
-.contact-content ul li img {
+.contact-content ul li a img {
     display: inline-block;
     width: 100px;
     height: auto;
-    justify-content: center;
-    /* background-color: #333; */
 }
 
 .text-contact {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5em;
-}
-
-#contact ul li p {
     color: #47B5FF;
     font-size: 1em;
-}
-
-/* contenido del enlace */
-#contact ul li b {
-    display: inline-block;
-    color: #DFF6FF;
     justify-content: center;
-    align-items: center;
     align-content: center;
 }
+
 
 
 
