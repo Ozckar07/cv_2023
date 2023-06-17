@@ -617,14 +617,6 @@ p {
     display: flex;
 }
 
-.contact-content {
-    display: flex;
-    width: 80%;
-    height: 80%;
-    justify-content: center;
-    align-items: center;
-}
-
 .contact-title {
     position: absolute;
     font-size: 4em;
@@ -635,11 +627,20 @@ p {
     align-items: center;
 }
 
+.contact-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    top: 210px;
+    background-color: #101100;
+}
+
 .contact-content ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 3 columnas iguales */
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 20px;    
     background-color: white;
 }
 
@@ -651,6 +652,9 @@ p {
     margin: 10px;
     background-color: #005f19;
 }
+#contact ul li a {
+    text-decoration: none;
+}
 
 /* QR IMG contact */
 .contact-content ul li img {
@@ -658,7 +662,7 @@ p {
     width: 100px;
     height: auto;
     justify-content: center;
-    background-attachment: fixed;
+    /* background-color: #333; */
 }
 
 .text-contact {
