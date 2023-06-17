@@ -11,6 +11,7 @@
 /* BODY STYLES */
 body {
     background-color: #06283D;
+    zoom: 90%;
     color: #47B5FF;
     display: flex;
     flex-direction: column;
@@ -50,6 +51,7 @@ section:nth-child(odd) {
 }
 
 section:nth-child(even) {
+    box-shadow: 0 0 20px red;
     background-color: transparent;
 }
 
@@ -66,29 +68,31 @@ footer {
 .side-nav {
     display: flex;
     position: fixed;
-    align-items: center;
-    background-color: #256D85;
+    width: 80px;
     height: 100%;
-    width: 90px;
-    z-index: 100;
+    align-items: center;
+    background-color: #256d859a;
     overflow: hidden;
-    transition: width 2s ease;
+    box-shadow: 0px 2px 10px #ffffff66;
     cursor: pointer;
-    box-shadow: 4px 7px 10px #ffffff66;
+    z-index: 100;
+    transition: all 1.5s ease;
 
 }
 
+/* evento que acciona al pasar el cursos por el menu */
 .side-nav:hover {
-    width: 600px;
-    height: 100vh;
+    width: 500px;
+    height: 100%;
     font-size: 2em;
-    /* Cambia el valor de opacidad según tus necesidades */
-    background-color: #256D85;
+    justify-content: center;
     border-radius: 0 370px 370px 0;
 }
 
 
 .side-nav ul {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
 }
 
@@ -97,36 +101,37 @@ footer {
 }
 
 .side-nav ul li a {
-    display: inline-block;
     text-decoration: none;
+    display: none;
     font-family: 'Roboto';
-    opacity: 0;
-    transition: all 2s ease;
     position: relative;
-    bottom: 0.8em;
-
+    align-content: center;
+    justify-content: center;
+    bottom: 0.5em;
+    transition: all 0.2s;
 }
 
 /* style .side-nav:hover contet */
 .side-nav:hover ul li a {
-    opacity: 100%;
+    justify-content: left;
     color: #ffffff;
-    empty-cells: show;
-    align-content: center;
-    justify-content: center;
+    display: inline-block;
+
+}
+
+.side-nav:hover img {
+    justify-content: left;
+    width: 22%;
+    height: auto;
+
 }
 
 
 /* /////////////////////////////////////////////////////////////////////////////// */
 
 .side-nav img {
-    width: 50px;
+    width: 100%;
     height: auto;
-    position: relative;
-}
-
-.side-nav img a {
-    position: relative;
 }
 
 /* @media screen and (min-width: 600px) {
@@ -145,6 +150,7 @@ footer {
 /* //////////////////// ESTILOS CHECKBOX IDIOMA /////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 .idiomas {
+    background-color: red;
     z-index: 10;
     display: inline-block;
     position: fixed;
@@ -431,24 +437,16 @@ footer {
 /* ///////////////////////////   SKILL SECTION  ////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
-.skills-title {
-    display: flex;
-    font-size: 4em;
-    color: #DFF6FF;
-    padding: 0 0 0 8%;
-    text-shadow: 5px 5px 8px #4acbef;
-}
-
 #skills {
     display: flex;
     flex-direction: column;
 }
 
-/*/////////////////// SECTION SKILLS LOGOS ////////////////*/
-.skills-content ul div {
-    display: flex;
-    padding: 20px 0 20px 0;
-    margin: 0 0 20px 0;
+.skills-title {
+    font-size: 4em;
+    color: #DFF6FF;
+    padding: 0 0 0 8%;
+    text-shadow: 5px 5px 8px #4acbef;
 }
 
 /* cada uno de los logos */
@@ -463,20 +461,33 @@ footer {
     border-radius: 25px;
 }
 
+/*/////////////////// SECTION SKILLS LOGOS ////////////////*/
+.skills-content ul div {
+    display: flex;
+    padding: 20px 0 20px 0;
+    margin: 0 0 20px 0;
+}
 
 /* agranda los iconos y le da opacidad al momento de pasar el mouse por cada categoria */
 .skills-content ul div:hover img {
     opacity: 2;
-    width: 40%;
+    width: 45%;
     height: auto;
 }
 
+.skills-content ul div:hover h2 {
+    font-size: 5em;
+    color: #ffffff25;
+    text-shadow: 0 0 40px rgb(0, 157, 255);
+}
 
 /* /////////////////// section SKILLS //////////////////*/
 .skills-content ul div h2 {
     color: #ffffff13;
     font-size: 5em;
     text-shadow: 0px 0px 50px rgb(106, 176, 255);
+    transition: all 0.3s;
+    /* background-color: red; */
 }
 
 
@@ -515,7 +526,7 @@ footer {
     width: 50px;
     height: auto;
     opacity: 0.4;
-    transition: all 1.5s;
+    transition: all 0.5s;
 }
 
 /* ///////////////////// TITLE FOR EACH SKILL /////////////////////////*/
@@ -601,16 +612,17 @@ p {
 /* ///////////////////////// CONTACT SECTION //////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
-.contact-content {
+
+#contact {
     display: flex;
-    position: relative;
-    left: 8%;
 }
 
-.contact-content ul li img {
-    width: 100px;
-    height: auto;
-    display: inline-block;
+.contact-content {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-title {
@@ -619,36 +631,57 @@ p {
     color: #DFF6FF;
     padding: 0 0 0 8%;
     text-shadow: 5px 5px 8px #4acbef;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 3 columnas iguales */
+    grid-gap: 20px;
+    background-color: white;
 }
 
 #contact ul li {
-    background-color: red;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
-    width: 200px;
-    height: auto;
+    background-color: #005f19;
 }
 
-#contact ul li a {
-    text-decoration: none;
-}
-
-#contact ul li strong {
+/* QR IMG contact */
+.contact-content ul li img {
     display: inline-block;
+    width: 100px;
+    height: auto;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.text-contact {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+#contact ul li p {
     color: #47B5FF;
+    font-size: 1em;
 }
 
 /* contenido del enlace */
 #contact ul li b {
     display: inline-block;
     color: #DFF6FF;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 
-.text-contact {
-    display: inline-block;
-    position: relative;
-    top: -5em;
-}
 
 
 /* //////////////////////////////////////////////////////////////////// */
