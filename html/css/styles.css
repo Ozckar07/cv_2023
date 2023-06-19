@@ -85,11 +85,10 @@ footer {
 
 /* evento que acciona al pasar el cursos por el menu */
 .side-nav:hover {
-    width: 500px;
+    width: 450px;
     height: 100%;
-    font-size: 2em;
-    justify-content: center;
-    border-radius: 0 370px 370px 0;
+    font-size: 1.5em;
+    border-radius: 0 350px 350px 0;
 }
 
 
@@ -151,7 +150,7 @@ footer {
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////// ESTILOS CHECKBOX IDIOMA /////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
-.idiomas {
+.languages {
     background-color: red;
     z-index: 10;
     display: inline-block;
@@ -348,13 +347,13 @@ footer {
 }
 
 .education-title {
-    display: inline-block;
     position: absolute;
     font-size: 4em;
     color: #DFF6FF;
-    padding: 0 0 0 8%;
+    padding: 2% 0 0 8%;
     text-shadow: 5px 5px 8px #4acbef;
-    background-color: red;
+    justify-content: center;
+    align-items: center;
 }
 
 .education-content {
@@ -426,105 +425,127 @@ span {
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
 #experience {
-    /* display: flex; */
-}
-
-#experience img {
-    display: inline-block;
-    position: relative;
-    left: 40%;
-    top: 0%;
-    background-color: #00a1ff;
-}
-/* 
-.experience-content {
-    display: inline-block;
-    position: relative;
-    left: 8%;
+    display: flex;
+    justify-content: center;
 }
 
 .experience-title {
-    display: flex;
+    position: absolute;
     font-size: 4em;
     color: #DFF6FF;
-    padding: 0 0 0 8%;
+    padding: 2% 0 0 8%;
     text-shadow: 5px 5px 8px #4acbef;
+    justify-content: center;
+    align-items: center;
 }
 
+
+.experience-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 .job {
-    padding: 1em;
+    background-color: red;
+    display: flex;
+    margin: 10px;
+    /* padding: 1em; */
 }
 
 .job h3 {
+    background-color: yellow;
     color: #885581;
-    position: relative;
-    padding-bottom: 1%;
 }
 
 .job p {
+    background-color: blue;
     color: #03bcff;
 }
 
 .job ul {
+    background-color: green;
     color: #15a023;
 }
 
 .job ul li {
+    background-color: violet;
     color: #ce1854;
-} */
+}
 
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////// ABOUT SECTION //////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
-#about {}
-
-.about-title {}
-
-.about-content {}
-
-#about img {
-    position: relative;
-    left: 40%;
-    top: 15%;
-}
-
-#about p {}
-
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* ///////////////////////////   SKILL SECTION  ////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-#skills {
+#about {
     display: flex;
-    flex-direction: column;
 }
 
-.skills-title {
+.about-title {
+    position: absolute;
     font-size: 4em;
     color: #DFF6FF;
-    padding: 0 0 0 8%;
+    padding: 2% 0 0 8%;
     text-shadow: 5px 5px 8px #4acbef;
+    justify-content: center;
+    align-items: center;
 }
 
-/* cada uno de los logos */
-.skills-content ul li {
-    text-align: center;
+/* .about-content {} */
+
+#about img {
     display: inline-block;
     position: relative;
-    width: 150px;
-    height: 100px;
-    overflow: hidden;
-    transition: all 1.5s;
-    border-radius: 25px;
+    left: 40%;
+    top: 0%;
+    background-color: #00a1ff;
 }
 
+/* #about p {} */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////   SKILL SECTION  ///////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+#skills {
+    display: flex;
+}
+.skills-title {
+    position: absolute;
+    font-size: 4em;
+    color: #DFF6FF;
+    padding: 2% 0 0 8%;
+    text-shadow: 5px 5px 8px #4acbef;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 5%;
+}
 /*/////////////////// SECTION SKILLS LOGOS ////////////////*/
 .skills-content ul div {
+    /* background-color: red; */
     display: flex;
-    padding: 20px 0 20px 0;
-    margin: 0 0 20px 0;
+    margin: 20px 0 0 0;
+}
+
+/* /////////////////// TEXT SECTIOM SKILLS //////////////////*/
+.skills-content ul div h2 {
+    color: #ffffff13;
+    font-size: 6em;
+    text-shadow: 0px 0px 50px rgb(106, 176, 255);
+    transition: all 0.3s;
+}
+
+.skills-content ul div:hover h2 {
+    font-size: 5em;
+    color: #ffffff25;
+    text-shadow: 0 0 40px rgb(0, 157, 255);
 }
 
 /* agranda los iconos y le da opacidad al momento de pasar el mouse por cada categoria */
@@ -534,21 +555,44 @@ span {
     height: auto;
 }
 
-.skills-content ul div:hover h2 {
-    font-size: 5em;
-    color: #ffffff25;
-    text-shadow: 0 0 40px rgb(0, 157, 255);
+/* cada uno de los logos */
+.skills-content ul li {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 220px;
+    height: 150px;
+    overflow: hidden;
+    transition: all 1.5s;
+    border-radius: 25px;
+    margin: 5px;
+}
+/* ///////////////////// LOGO SKILL ////////////////////////// */
+.skills-content ul li img {
+    width: 60px;
+    height: auto;
+    opacity: 0.5;
+    transition: all 0.5s;
 }
 
-/* /////////////////// section SKILLS //////////////////*/
-.skills-content ul div h2 {
-    color: #ffffff13;
-    font-size: 5em;
-    text-shadow: 0px 0px 50px rgb(106, 176, 255);
-    transition: all 0.3s;
-    /* background-color: red; */
+/* ///////////////////// TITLE FOR EACH SKILL /////////////////////////*/
+p {
+    color: #ccf0ff;
+    font-size: 1.5em;
+    text-shadow: 1px 5px 8px #03bcff;
 }
 
+/* capacidades de cada skill */
+.skills-content ul li div {
+    /* display: block; */
+    display: none;
+}
+.skills-content ul li div p {
+    text-align: justify;
+    margin: 15px;
+    font-size: 16px;
+    color: #ccf0ff;
+}
 
 .skills-content ul li:hover {
     display: flex;
@@ -567,33 +611,10 @@ span {
     opacity: 1;
 }
 
-.skills-content ul li div {
-    /* overflow: hidden; */
+.skills-content ul li:hover div {
     display: block;
-
 }
 
-.skills-content ul li div p {
-    text-align: justify;
-    margin: 15px;
-    font-size: 16px;
-    color: #ccf0ff;
-}
-
-/* ///////////////////// LOGO SKILL ////////////////////////// */
-.skills-content ul li img {
-    width: 50px;
-    height: auto;
-    opacity: 0.4;
-    transition: all 0.5s;
-}
-
-/* ///////////////////// TITLE FOR EACH SKILL /////////////////////////*/
-p {
-    color: #ccf0ff;
-    font-size: 1.5em;
-    text-shadow: 1px 5px 8px #03bcff;
-}
 
 /* //////////////// FRONTEND STYLES ///////////////*/
 .frontend-skills {
@@ -643,30 +664,6 @@ p {
     display: block;
     position: absolute;
 }
-
-/* .frontend-skills:hover {
-    background-color: #00a1ff;
-
-}
-
-.backend-skills:hover {
-    padding-bottom: 150px;
-    background-color: #00a1ff;
-
-}
-
-.documentation-skills:hover {
-    padding-bottom: 150px;
-    background-color: #00a1ff;
-
-}
-
-.infra-skills:hover {
-    padding-top: 150px;
-    background-color: #00a1ff;
-} */
-
-
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////// CONTACT SECTION //////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
@@ -680,7 +677,7 @@ p {
     position: absolute;
     font-size: 4em;
     color: #DFF6FF;
-    padding: 0 0 0 8%;
+    padding: 2% 0 0 8%;
     text-shadow: 5px 5px 8px #4acbef;
     justify-content: center;
     align-items: center;
