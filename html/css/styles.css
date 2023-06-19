@@ -527,9 +527,12 @@ span {
     justify-content: center;
     padding-top: 5%;
 }
+.skills-content ul{
+    background-color: red;
+}
+
 /*/////////////////// SECTION SKILLS LOGOS ////////////////*/
 .skills-content ul div {
-    /* background-color: red; */
     display: flex;
     margin: 20px 0 0 0;
 }
